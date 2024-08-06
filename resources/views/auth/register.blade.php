@@ -54,6 +54,20 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="labor_code" class="col-md-4 col-form-label text-md-end">{{ __('Labor Code') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="labor_code" type="number" class="form-control @error('labor_code') is-invalid @enderror" name="labor_code" value="{{ old('labor_code') }}" required>
+
+                                @error('labor_code')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Timesheet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TimesheetController extends Controller
 {
@@ -14,7 +16,8 @@ class TimesheetController extends Controller
 
 	public function create()
 	{
-			return view('timesheets.create');
+			$user = auth()->user();
+			return view('timesheets.create', compact('user'));
 	}
 
 	public function store(Request $request)
