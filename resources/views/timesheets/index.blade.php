@@ -11,6 +11,7 @@
                 <th>Labor Code</th>
                 <th>Work Week</th>
                 <th>Year</th>
+                <th>View</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                 <td>{{ $timesheet->labor_code }}</td>
                 <td>{{ $timesheet->work_week }}</td>
                 <td>{{ $timesheet->year }}</td>
+                <td><a href="{{ route('timesheets.show', $timesheet->id) }}" class="btn btn-info">View</a></td>
             </tr>
             @endforeach
         </tbody>

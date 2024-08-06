@@ -13,6 +13,17 @@ class TimesheetController extends Controller
 			$timesheets = Timesheet::with(['user'])->get();
 			return view('timesheets.index', compact('timesheets'));
 	}
+	
+	/**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+		public function show(Timesheet $timesheet)
+    {
+        return view('timesheets.show', compact('timesheet'));
+    }
 
 	public function create()
 	{
