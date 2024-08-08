@@ -30,4 +30,9 @@ class Timesheet extends Model
 		{
 				return $this->belongsTo(User::class);
 		}
+		
+		public function row()
+		{
+				return $this->belongsTo(Row::class);
+		}
 }
